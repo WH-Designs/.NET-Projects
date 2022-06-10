@@ -1,0 +1,42 @@
+@model Event
+@{
+    ViewData["Title"] = "Listings Page";
+}
+<div class="container">
+    <div class="text-center">
+        <h1>Event Listings</h1>
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th>Event Title</th>
+                    <th>Event Address</th>
+                    <th>Event Date</th>
+                    <th>Host Name</th>
+                    <th>Host Number</th>
+                    <th>Remove Event</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null){
+                    foreach (var plannedevent in Model.ListOfEvents)
+                    {
+                        <tr>
+                            <td>@plannedevent.Title</td>
+                            <td>@plannedevent.Address</td>
+                            <td>@plannedevent.Date</td>
+                            <td>@plannedevent.CoordinatorName</td>
+                            <td>@plannedevent.CoordinatorPhone</td>
+                            <td>
+                                <button id="remove" type="button" data-id="@plannedevent.Title"
+                                class="btn alert-danger btn-sm my-0">Remove</button>
+                            </td> 
+                        </tr>  
+                    }
+                }
+            </tbody>
+        </table>
+        <a class="nav-link text-light" asp-area="" asp-controller="EventPlanner" asp-action="Itinerary">
+            <button type="button" class="btn listing-button" id="itinerary-btn">Click here for the itinerary</button>
+        </a>
+    </div>
+</div>

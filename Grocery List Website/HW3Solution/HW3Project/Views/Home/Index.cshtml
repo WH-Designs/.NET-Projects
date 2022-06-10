@@ -1,0 +1,60 @@
+﻿@model List<HW3Project.Models.GroceryItemModel>
+@{
+    ViewData["Title"] = "Grocery Dex";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Grocery List</h1>
+    <div class="container">
+        <form>
+            @{
+                ViewBag.currentItems = Model;
+            }
+            <table class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Grocery Item</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Remove</th>
+                        @* <th scope="col">Total</th> *@
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="grocery-item">
+                        @if (ViewBag.currentItems is not null)
+                        {
+                            foreach (var item in ViewBag.currentItems)
+                            {
+                                <td>@item.ItemName</td>
+                                <td>@item.ItemCount</td>
+                                <td>
+                                    <button id="remove" type="button" data-id="@item.ItemName"
+                                    class="btn alert-danger btn-sm my-0">Remove</button>
+                                </td>
+                            }
+                        }
+                    </tr>
+                    @* <tr>
+                        @if (ViewBag.currentItems is not null)
+                        {
+                            int total = 0;
+                            foreach (var item in ViewBag.currentItems)
+                            {
+                                Func<int, int, int> add = ((total, item.ItemCount) => total + item.ItemCount);
+                            }
+                        }
+                    </tr> *@
+                </tbody>
+            </table>
+        </form>
+        <form asp-action="AddGroceryItem">
+            <div class="form-group">
+                <label for="itemName">Item Name</label>
+                <input name="itemName" type="Text" class="form-control" id="itemName" placeholder="ex: carrots">
+                <label for="itemQuantity">Quantity</label>
+                <input name="itemQuantity" type="Number" class="form-control" id="itemQuantity" placeholder="ex: 3">
+                <button id="add" type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </form>
+    </div>
+</div>

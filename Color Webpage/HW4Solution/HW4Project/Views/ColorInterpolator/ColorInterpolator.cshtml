@@ -1,0 +1,52 @@
+@model ColorInterpolation
+@{
+    ViewData["Title"] = "CS 366 HW4";
+}
+<div class="container">
+    <h2 class="header-title">Interpolate from one color to another</h2>
+    <div class="row align-items-start">
+        <div class="col">
+            <p>Please enter colors in HTML hexadeciaml format: #AABBCC</p>
+            <form class="color-interp" asp-controller="ColorInterpolator" asp-action="Create" method="post">
+                <div class="form-group">
+                    <label> First Color
+                        <input asp-for="FirstColor" class="form-control" placeholder="#12B37F">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label> Second Color
+                        <input asp-for="SecondColor" class="form-control" placeholder="#A13344">
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label> Number of colors
+                        <input asp-for="NumberOfColors" class="form-control">
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Generate Colors</button>
+            </form>
+        </div>
+        <div class="col-1>">
+            <ul class="color-interp-list">
+                <lh class="list-header"><strong>Html</strong></lh>
+                @if (Model != null){
+                    foreach (var color in Model.ListOfColors)
+                    {
+                        <li class="color-item">@color</li>
+                    }
+                }
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="color-interp-list">
+                <lh class="list-header"><strong>Color</strong></lh>
+                @if (Model != null){
+                    foreach (var color in Model.ListOfColors)
+                    {
+                        <li class="color-item" style="background-color: @color"></li>   
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+</div>

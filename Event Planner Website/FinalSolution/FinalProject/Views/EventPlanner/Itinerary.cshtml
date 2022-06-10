@@ -1,0 +1,67 @@
+@model List<string>
+@{
+    ViewData["Title"] = "Itinerary Page";
+}
+<div class="container">
+    <div class="text-center">
+        <h1 class="modified-h1">Event Itinerary</h1>
+        <div class="col">
+            <form class="form" asp-controller="EventPlanner" asp-action="ListActivities" method="get">
+                <div class="form-group itin">
+                    <label for="type">Type of Event</label>
+                    <select class="form-control" id="type" name="type">
+                        <option>Party</option>
+                        <option>Social Gathering</option>
+                    </select>
+                </div>
+                <div class="form-group itin">
+                    <label for="audience">Audience</label>
+                    <select class="form-control" id="audience" name="audience">
+                        <option>Kids</option>
+                        <option>Adults</option>
+                        <option>All of the above</option>
+                    </select>
+                </div>
+                <div class="form-group itin">
+                    <label for="location">Location</label>
+                    <select class="form-control" id="location" name="location">
+                        <option>Inside</option>
+                        <option>Outside</option>
+                    </select>
+                </div>
+                <div class="form-group itin">
+                    <label for="time">Time of Day</label>
+                    <select class="form-control" id="time" name="time">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+                <button id="activity-plan" type="submit" class="btn">Get List of Activities</button>
+            </form>
+        </div>
+    </div>
+    <div class="col">
+        <table class="table table-bordered table-dark itinerary-table">
+            <thead>
+                <tr>
+                    <th scope="row">#</th>
+                    <th>Acticities</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    int count = 1;
+                    for (int i = 0; i < Model.Count; i++)
+                    {
+                        <tr>
+                            <td scope="row">@count</td>
+                            <td>@Model[i]</td>
+                        </tr>
+                        <div style="display: none;">@(count += 1)</div>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

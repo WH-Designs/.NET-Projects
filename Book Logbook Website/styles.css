@@ -1,0 +1,190 @@
+.align-items-start{
+    background-color: rgb(127, 201, 67);
+    width: 100%;
+    margin: auto;
+}
+h1{
+    font-family: serif;
+    text-decoration: underline;
+    font-style: italic;
+    text-indent: 10px;
+}
+h2{
+    font-family: serif;
+    text-decoration: underline;
+    font-style: bold;
+    text-align: center;
+    font-size: 100px;
+}
+body{
+    background-color: rgb(199, 232, 172);
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+}
+a.tab{
+    text-decoration: none;
+    color: black;
+    font-family: serif;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    display: block;
+    height: 32px;
+    width: 160px;
+    text-align: center;
+    line-height: 25px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 350px;
+    margin-top: 3%;
+}
+footer{
+    margin-bottom: 0%;
+    line-height:100px;
+    height:100px;
+    text-align:center;
+    font-size:20px;
+    background-color: rgb(127, 201, 67);
+    margin-top: 70px;
+}
+.vote{
+    display: block;
+    text-align: center;
+    font-family: serif;
+    width: 600px;
+    background-color:antiquewhite;
+}
+p{
+    display: block;
+    text-align: center;
+    font-family: serif;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    font-size: 20pt;
+    width: 1000px;
+    margin: auto;
+    margin-top: 3%;
+}
+.ai-button{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    background-color: transparent;
+    border-color: transparent;
+}
+#log{
+   width: 116.8%; 
+   margin-left: -8.4%;
+}
+.table-bordered{
+    font-family: serif;
+    background: rgb(141, 214, 141);
+    font-size: 20px;
+    width: 100%;
+    margin: auto;
+}
+#lists{
+    background-color: rgb(199, 232, 172);
+    width: auto;
+}
+h3{
+    font-style: bold;
+    text-align: center;
+    font-family: serif;
+    text-decoration: underline;
+}
+.book-input{
+    display: block;
+    margin-top: 10%;
+    font-family: serif;
+    font-size: 15pt;
+    width: 0;
+    margin-left: 450px;
+}
+#title{
+    width: 400px;
+    background-color: rgb(141, 214, 141);
+}
+#author{
+    width: 400px;
+    margin-top: 10px;
+    background-color: rgb(141, 214, 141);
+}
+#type{
+    width: 400px;
+    margin-top: 10px;
+    background-color: rgb(141, 214, 141);
+}
+#owned{
+    margin-top: 30px;
+    width: 200px;
+    background-color: rgb(141, 214, 141);
+    margin-left: 100px;
+}
+#wishlist{
+    margin-top: 30px;
+    width: 200px;
+    background-color: rgb(141, 214, 141);
+    margin-left: 100px;
+}
+#store{
+    width: 116.8%; 
+    margin-left: -8.4%;
+}
+.barnes{
+    width: 600px;
+    height: 90px;
+    margin-top: 10px;
+}
+.powells{
+    width: 500px;
+    height: 90px;
+    margin-top: 10px;
+}
+.audible{
+    width: 400px;
+    height: 90px;
+    margin-top: 10px;
+}
+#link{
+    font-family: serif;
+    font-size: 80px;
+    text-align: center;
+    color: black;
+    width: 800px;
+    text-decoration: underline;
+}
+#links1{
+    background-color: transparent;
+    margin-left: 20px;
+    margin-top: 5%;
+    border-style: solid;
+    border-color: black;
+    width: fit-content;
+}
+#links2{
+    background-color: transparent;
+    margin-left: 135px;
+    margin-top: 5%;
+    border-style: solid;
+    border-color: black;
+    width: fit-content;
+}
+#links3{
+    background-color: transparent;
+    margin-left: 300px;
+    margin-top: 5%;
+    border-style: solid;
+    border-color: black;
+    width: fit-content;
+}

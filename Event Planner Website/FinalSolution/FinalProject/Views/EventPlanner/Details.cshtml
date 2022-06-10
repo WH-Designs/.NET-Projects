@@ -1,0 +1,70 @@
+@model Event
+@{
+    ViewData["Title"] = "Details Page";
+}
+<div class="container">
+    <div class="col">
+        <form class="form-inline" asp-controller="EventPlanner" asp-action="AddEvent" method="post">
+            <div class="col">    
+                <h3>Event Details</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label>Event Title</label>
+                        <input asp-for="Title" class="form-control">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Event Date</label>
+                    <input asp-for="Date" class="form-control">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Event Address</label>
+                    <input asp-for="Address" class="form-control">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Event Description</label>
+                    <input asp-for="Description" class="form-control">
+                </div>
+                </div>
+                <h3 class="coordinator-header">Coordinator Details</h3>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Name</label>
+                    <input asp-for="CoordinatorName" class="form-control">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Phone #</label>
+                    <input asp-for="CoordinatorPhone" class="form-control">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Email</label>
+                    <input asp-for="CoordinatorEmail" class="form-control">
+                </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                    <label>Number of guests</label>
+                    <input asp-for="NumberOfGuests" class="form-control">
+                </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row submit-details">
+                    <div class="text-center">
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</h2>
+                        <button id="plan" type="submit" class="btn">Plan the Event</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
